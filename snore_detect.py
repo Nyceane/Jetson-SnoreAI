@@ -7,7 +7,14 @@ import time
 import wave
 import tensorflow as tf
 import numpy as np
+from datetime import datetime
+import pyaudio
+import wave
+import audioop
+import json
 
+isRecording = False
+currentLabel = ''
 # pylint: disable=unused-import
 from tensorflow.contrib.framework.python.ops import audio_ops as contrib_audio
 # pylint: enable=unused-import
@@ -40,7 +47,7 @@ class Recorder(threading.Thread):
         """
 
     super(Recorder, self).__init__()
-
+    
     self._processors = []
 
     self._chunk_bytes = int(
@@ -71,7 +78,20 @@ class Recorder(threading.Thread):
 
   def run(self):
     """Reads data from arecord and passes to processors."""
-
+    global isRecording
+    global currentLabel
+    recordCounter = 0
+    sample_format = pyaudio.paInt16  # 16 bits per sample
+    channels = 1
+    fs = 16000  # Record at 16000 samples per second
+    seconds = 3
+    filename = "tmp/output.wav"
+    p = pyaudio.PyAudio()  # Create an interface to PortAudio
+    stream = p.open(format=sample_format,
+                channels=channels,
+                rate=fs,
+                frames_per_buffer=self._chunk_bytes,
+                input=True)
     self._arecord = subprocess.Popen(self._cmd, stdout=subprocess.PIPE)
     logger.info('started recording')
 
@@ -82,6 +102,7 @@ class Recorder(threading.Thread):
       return
 
     this_chunk = b''
+    frames = []  # Initialize array to store frames
 
     while True:
       input_data = self._arecord.stdout.read(self._chunk_bytes)
@@ -89,6 +110,59 @@ class Recorder(threading.Thread):
         break
 
       this_chunk += input_data
+      rms = audioop.rms(this_chunk, 2)    # here's where you calculate the volume
+      starttime = datetime.now().strftime("%m-%d-%Y+%H:%M:%S")
+      #start recording
+      if isRecording == True and recordCounter == 0:
+        starttime = datetime.now().strftime("%m-%d-%Y+%H:%M:%S")
+        filename = "tmp/"+ datetime.now().strftime("%m-%d-%Y+%H:%M:%S") + ".wav"
+        data = stream.read(self._chunk_bytes)
+        frames.append(data)
+        recordCounter += 1
+        print("start recording" + filename)
+      #stops recording
+      elif isRecording == True and recordCounter > 100 and rms < 150:
+        isRecording = False
+        recordCounter = 0
+        # Save the recorded data as a WAV file  
+        wf = wave.open(filename, 'wb')
+        wf.setnchannels(channels)
+        wf.setsampwidth(p.get_sample_size(sample_format))
+        wf.setframerate(fs)
+        wf.writeframes(b''.join(frames))
+        duration = wf.getnframes() / float(wf.getframerate())
+        wf.close()
+
+
+        print("stop recording" + filename)
+        with open('tmp/data.txt') as json_file:
+          data = json.load(json_file)
+          data['data'].append(
+              {
+                'time': starttime,
+                'file': filename,
+                'label': currentLabel,
+                'duration': duration
+              }
+            )
+          with open('tmp/data.txt', 'w') as outfile:
+              json.dump(data, outfile)
+        frames = []
+
+
+      #still noise
+      elif isRecording == True and recordCounter > 100 and rms > 150:
+        data = stream.read(self._chunk_bytes)
+        frames.append(data)
+        recordCounter = 1
+
+      #keeps recording
+      elif isRecording == True:
+        recordCounter += 1
+        data = stream.read(self._chunk_bytes)
+        frames.append(data)
+        print(str(rms) + "," + datetime.now().strftime("%m-%d-%Y+%H:%M:%S"))
+
       if len(this_chunk) >= self._chunk_bytes:
         self._handle_chunk(this_chunk[:self._chunk_bytes])
         this_chunk = this_chunk[self._chunk_bytes:]
@@ -166,6 +240,8 @@ class RecognizeCommands(object):
     return [line.rstrip() for line in tf.gfile.GFile(filename)]
 
   def add_data(self, data_bytes):
+    global isRecording
+    global currentLabel
     """Process audio data."""
     if not data_bytes:
       return
@@ -237,6 +313,8 @@ class RecognizeCommands(object):
       self.previous_top_label_time_ = current_time_ms
       is_new_command = True
       logger.info(current_top_label)
+      currentLabel = current_top_label
+      isRecording = True      
     else:
       is_new_command = False
 
@@ -298,7 +376,7 @@ def main():
   parser.add_argument(
       '--detection_threshold',
       type=float,
-      default='0.7',
+      default='0.6',
       help='Score required to trigger recognition.')
   parser.add_argument(
       '--suppression_ms',
