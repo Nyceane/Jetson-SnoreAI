@@ -21,6 +21,8 @@
 		21053D6822088693006AFFB7 /* SDDownloadObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21053D6522088693006AFFB7 /* SDDownloadObject.swift */; };
 		21053D6922088693006AFFB7 /* SDFileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21053D6622088693006AFFB7 /* SDFileUtils.swift */; };
 		21053D6A22088693006AFFB7 /* SDDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21053D6722088693006AFFB7 /* SDDownloadManager.swift */; };
+		C83844E023F4B69300C1C4C3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83844DE23F4B69300C1C4C3 /* NetworkManager.swift */; };
+		C83844E323F4B6B600C1C4C3 /* APIResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83844E223F4B6B600C1C4C3 /* APIResponses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		21053D6522088693006AFFB7 /* SDDownloadObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDDownloadObject.swift; sourceTree = "<group>"; };
 		21053D6622088693006AFFB7 /* SDFileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDFileUtils.swift; sourceTree = "<group>"; };
 		21053D6722088693006AFFB7 /* SDDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDDownloadManager.swift; sourceTree = "<group>"; };
+		C83844DE23F4B69300C1C4C3 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C83844E223F4B6B600C1C4C3 /* APIResponses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 		21053D2622088635006AFFB7 /* AudioWaveForm */ = {
 			isa = PBXGroup;
 			children = (
+				C83844E123F4B6B600C1C4C3 /* Models */,
+				C83844DD23F4B69300C1C4C3 /* Managers */,
 				21053D5522088654006AFFB7 /* Resources */,
 				21053D2722088635006AFFB7 /* AppDelegate.swift */,
 				21053D2922088635006AFFB7 /* ViewController.swift */,
@@ -174,6 +180,22 @@
 				21053D5E2208868A006AFFB7 /* SYWaveformPlayerView.m */,
 			);
 			path = SYWaveformPlayer;
+			sourceTree = "<group>";
+		};
+		C83844DD23F4B69300C1C4C3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C83844DE23F4B69300C1C4C3 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C83844E123F4B6B600C1C4C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C83844E223F4B6B600C1C4C3 /* APIResponses.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,8 +334,10 @@
 			files = (
 				21053D642208868A006AFFB7 /* SYWaveformPlayerView.m in Sources */,
 				21053D632208868A006AFFB7 /* SCWaveformView.m in Sources */,
+				C83844E323F4B6B600C1C4C3 /* APIResponses.swift in Sources */,
 				21053D6922088693006AFFB7 /* SDFileUtils.swift in Sources */,
 				21053D6822088693006AFFB7 /* SDDownloadObject.swift in Sources */,
+				C83844E023F4B69300C1C4C3 /* NetworkManager.swift in Sources */,
 				21053D2A22088635006AFFB7 /* ViewController.swift in Sources */,
 				21053D2822088635006AFFB7 /* AppDelegate.swift in Sources */,
 				21053D6A22088693006AFFB7 /* SDDownloadManager.swift in Sources */,
