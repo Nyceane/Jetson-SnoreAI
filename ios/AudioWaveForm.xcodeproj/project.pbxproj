@@ -23,6 +23,8 @@
 		21053D6A22088693006AFFB7 /* SDDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21053D6722088693006AFFB7 /* SDDownloadManager.swift */; };
 		C83844E023F4B69300C1C4C3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83844DE23F4B69300C1C4C3 /* NetworkManager.swift */; };
 		C83844E323F4B6B600C1C4C3 /* APIResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83844E223F4B6B600C1C4C3 /* APIResponses.swift */; };
+		C83844E523F4B85100C1C4C3 /* AudioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83844E423F4B85100C1C4C3 /* AudioTableViewController.swift */; };
+		C83844E723F4BBAB00C1C4C3 /* AudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83844E623F4BBAB00C1C4C3 /* AudioTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		21053D6722088693006AFFB7 /* SDDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDDownloadManager.swift; sourceTree = "<group>"; };
 		C83844DE23F4B69300C1C4C3 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C83844E223F4B6B600C1C4C3 /* APIResponses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponses.swift; sourceTree = "<group>"; };
+		C83844E423F4B85100C1C4C3 /* AudioTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewController.swift; sourceTree = "<group>"; };
+		C83844E623F4BBAB00C1C4C3 /* AudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 				21053D5522088654006AFFB7 /* Resources */,
 				21053D2722088635006AFFB7 /* AppDelegate.swift */,
 				21053D2922088635006AFFB7 /* ViewController.swift */,
+				C83844E423F4B85100C1C4C3 /* AudioTableViewController.swift */,
+				C83844E623F4BBAB00C1C4C3 /* AudioTableViewCell.swift */,
 				21053D2B22088635006AFFB7 /* Main.storyboard */,
 				21053D2E22088637006AFFB7 /* Assets.xcassets */,
 				21053D3022088637006AFFB7 /* LaunchScreen.storyboard */,
@@ -262,7 +268,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = AK_Creation;
+				ORGANIZATIONNAME = "Vimo Labs";
 				TargetAttributes = {
 					21053D2322088635006AFFB7 = {
 						CreatedOnToolsVersion = 10.1;
@@ -334,10 +340,12 @@
 			files = (
 				21053D642208868A006AFFB7 /* SYWaveformPlayerView.m in Sources */,
 				21053D632208868A006AFFB7 /* SCWaveformView.m in Sources */,
+				C83844E523F4B85100C1C4C3 /* AudioTableViewController.swift in Sources */,
 				C83844E323F4B6B600C1C4C3 /* APIResponses.swift in Sources */,
 				21053D6922088693006AFFB7 /* SDFileUtils.swift in Sources */,
 				21053D6822088693006AFFB7 /* SDDownloadObject.swift in Sources */,
 				C83844E023F4B69300C1C4C3 /* NetworkManager.swift in Sources */,
+				C83844E723F4BBAB00C1C4C3 /* AudioTableViewCell.swift in Sources */,
 				21053D2A22088635006AFFB7 /* ViewController.swift in Sources */,
 				21053D2822088635006AFFB7 /* AppDelegate.swift in Sources */,
 				21053D6A22088693006AFFB7 /* SDDownloadManager.swift in Sources */,
