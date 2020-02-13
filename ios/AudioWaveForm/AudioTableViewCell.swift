@@ -17,7 +17,11 @@ class AudioTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lblMessage: UILabel!
     @IBOutlet weak var vwBtnDownload: UIView!
-
+    
+    @IBOutlet weak var type: UILabel!
+    
+    @IBOutlet weak var duration: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         vwDownload.layer.cornerRadius = 10.0

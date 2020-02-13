@@ -163,7 +163,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDj-nd-Dxv" userLabel="vwAudioPlayerMain">
-                                            <rect key="frame" x="0.0" y="15" width="320" height="50"/>
+                                            <rect key="frame" x="0.0" y="30" width="320" height="50"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="B7X-Iy-b4L"/>
@@ -171,7 +171,7 @@
                                             </constraints>
                                         </view>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXR-Jz-Zre" userLabel="vwDownload">
-                                            <rect key="frame" x="0.0" y="15" width="320" height="50"/>
+                                            <rect key="frame" x="0.0" y="30" width="320" height="50"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9MJ-om-lRx" userLabel="vwDownloadProgress">
                                                     <rect key="frame" x="28" y="0.0" width="284" height="50"/>
@@ -245,7 +245,7 @@
                                                         <constraint firstItem="7UP-vQ-iJi" firstAttribute="top" secondItem="0gt-Hh-42h" secondAttribute="top" id="sUz-r0-aQW"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download and play post audio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBa-xb-H5P">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download and play audio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBa-xb-H5P">
                                                     <rect key="frame" x="56" y="0.0" width="256" height="50"/>
                                                     <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -269,17 +269,51 @@
                                                 <constraint firstAttribute="trailing" secondItem="wBa-xb-H5P" secondAttribute="trailing" constant="8" id="xLt-19-0EN"/>
                                             </constraints>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1j-D0-oN6">
+                                            <rect key="frame" x="180" y="5" width="70" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbO-O5-HiP">
+                                            <rect key="frame" x="101" y="5" width="34" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw8-z4-eZG">
+                                            <rect key="frame" x="258" y="5" width="64" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qO-2s-Un0">
+                                            <rect key="frame" x="50" y="5" width="43" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="cXR-Jz-Zre" secondAttribute="bottom" id="046-4X-GG8"/>
+                                        <constraint firstItem="zbO-O5-HiP" firstAttribute="leading" secondItem="4qO-2s-Un0" secondAttribute="trailing" constant="8" id="4xn-L4-uNR"/>
                                         <constraint firstItem="cXR-Jz-Zre" firstAttribute="centerX" secondItem="KJt-SR-IGb" secondAttribute="centerX" id="6eQ-qM-KGf"/>
-                                        <constraint firstItem="vDj-nd-Dxv" firstAttribute="centerY" secondItem="KJt-SR-IGb" secondAttribute="centerY" id="9xo-5P-YLT"/>
+                                        <constraint firstItem="Cw8-z4-eZG" firstAttribute="centerY" secondItem="T1j-D0-oN6" secondAttribute="centerY" id="HSe-gQ-HqW"/>
+                                        <constraint firstItem="T1j-D0-oN6" firstAttribute="centerY" secondItem="4qO-2s-Un0" secondAttribute="centerY" id="NSU-w8-ALx"/>
                                         <constraint firstItem="vDj-nd-Dxv" firstAttribute="centerX" secondItem="KJt-SR-IGb" secondAttribute="centerXWithinMargins" id="X4W-OL-s1e"/>
-                                        <constraint firstItem="cXR-Jz-Zre" firstAttribute="centerY" secondItem="KJt-SR-IGb" secondAttribute="centerY" id="fWG-oO-Geu"/>
+                                        <constraint firstItem="zbO-O5-HiP" firstAttribute="centerY" secondItem="4qO-2s-Un0" secondAttribute="centerY" id="bsr-lE-4ei"/>
+                                        <constraint firstItem="Cw8-z4-eZG" firstAttribute="leading" secondItem="T1j-D0-oN6" secondAttribute="trailing" constant="8" id="cVb-Hf-Iyp"/>
+                                        <constraint firstItem="4qO-2s-Un0" firstAttribute="leading" secondItem="KJt-SR-IGb" secondAttribute="leading" constant="50" id="ctT-jF-wGP"/>
+                                        <constraint firstItem="4qO-2s-Un0" firstAttribute="top" secondItem="KJt-SR-IGb" secondAttribute="top" constant="5" id="jbC-K9-yWx"/>
+                                        <constraint firstItem="T1j-D0-oN6" firstAttribute="leading" secondItem="KJt-SR-IGb" secondAttribute="leading" constant="180" id="xWH-YQ-Ud3"/>
+                                        <constraint firstAttribute="bottom" secondItem="vDj-nd-Dxv" secondAttribute="bottom" id="xdJ-5F-BVy"/>
                                         <constraint firstItem="vDj-nd-Dxv" firstAttribute="centerX" secondItem="KJt-SR-IGb" secondAttribute="centerX" id="zHy-Jp-Hbc"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="duration" destination="Cw8-z4-eZG" id="zvj-EQ-yJc"/>
                                     <outlet property="lblMessage" destination="wBa-xb-H5P" id="EY3-OO-PyK"/>
+                                    <outlet property="type" destination="zbO-O5-HiP" id="DSx-Zf-Eai"/>
                                     <outlet property="vwAudioPlayerMain" destination="vDj-nd-Dxv" id="qrd-Gf-JUh"/>
                                     <outlet property="vwAudioProgress" destination="Sli-6F-491" id="Hiv-8a-pK1"/>
                                     <outlet property="vwBtnDownload" destination="0gt-Hh-42h" id="X0p-0N-Dce"/>
@@ -304,7 +338,7 @@
             <objects>
                 <navigationController id="fSe-Qz-1Zf" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J4F-e5-4cV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
