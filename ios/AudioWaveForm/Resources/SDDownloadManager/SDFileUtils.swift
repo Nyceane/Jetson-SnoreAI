@@ -36,7 +36,7 @@ class SDFileUtils: NSObject {
         //Custom code for display file into local file manager
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let paths = documentsDirectory[0].appendingPathComponent("DownloadAudio")
-        let filename = "Audio_\(directory!).m4a"
+        let filename = "Audio_\(directory!).wav"
         let filePath = paths.appendingPathComponent(filename)
         do{
             try FileManager.default.createDirectory(atPath: paths.path, withIntermediateDirectories: true, attributes: nil)

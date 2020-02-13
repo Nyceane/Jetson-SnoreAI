@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fSe-Qz-1Zf">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -16,11 +16,11 @@
                         <viewControllerLayoutGuide type="bottom" id="hBK-zk-hbk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Eh-qf-qzk" userLabel="vwAudioPlayerMain">
-                                <rect key="frame" x="0.0" y="215" width="320" height="50"/>
+                                <rect key="frame" x="47" y="423" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aor-iR-keC"/>
@@ -28,7 +28,7 @@
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8xo-MD-h9P" userLabel="vwDownload">
-                                <rect key="frame" x="0.0" y="215" width="320" height="50"/>
+                                <rect key="frame" x="47" y="423" width="320" height="50"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIu-dP-2v1" userLabel="vwDownloadProgress">
                                         <rect key="frame" x="28" y="0.0" width="284" height="50"/>
@@ -150,20 +150,20 @@
         <scene sceneID="cVU-v0-EOb">
             <objects>
                 <tableViewController id="0Bk-FG-aQg" customClass="AudioTableViewController" customModule="AudioWaveForm" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vxs-Ow-ldy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vxs-Ow-ldy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="soundIdentifier" id="Jl2-cY-o4l" customClass="AudioTableViewCell" customModule="AudioWaveForm" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="80"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jl2-cY-o4l" id="KJt-SR-IGb">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDj-nd-Dxv" userLabel="vwAudioPlayerMain">
-                                            <rect key="frame" x="0.0" y="30" width="320" height="50"/>
+                                            <rect key="frame" x="47" y="50" width="320" height="50"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="B7X-Iy-b4L"/>
@@ -171,7 +171,7 @@
                                             </constraints>
                                         </view>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXR-Jz-Zre" userLabel="vwDownload">
-                                            <rect key="frame" x="0.0" y="30" width="320" height="50"/>
+                                            <rect key="frame" x="47" y="50" width="320" height="50"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9MJ-om-lRx" userLabel="vwDownloadProgress">
                                                     <rect key="frame" x="28" y="0.0" width="284" height="50"/>
@@ -270,7 +270,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1j-D0-oN6">
-                                            <rect key="frame" x="200" y="5" width="70" height="21"/>
+                                            <rect key="frame" x="180" y="5" width="70" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -282,7 +282,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw8-z4-eZG">
-                                            <rect key="frame" x="278" y="5" width="64" height="21"/>
+                                            <rect key="frame" x="258" y="5" width="64" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -293,19 +293,35 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9o-Mw-hRt">
+                                            <rect key="frame" x="180" y="25" width="43" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6x4-5a-uUT">
+                                            <rect key="frame" x="231" y="25" width="34" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="cXR-Jz-Zre" secondAttribute="bottom" id="046-4X-GG8"/>
                                         <constraint firstItem="zbO-O5-HiP" firstAttribute="leading" secondItem="4qO-2s-Un0" secondAttribute="trailing" constant="8" id="4xn-L4-uNR"/>
                                         <constraint firstItem="cXR-Jz-Zre" firstAttribute="centerX" secondItem="KJt-SR-IGb" secondAttribute="centerX" id="6eQ-qM-KGf"/>
+                                        <constraint firstItem="6x4-5a-uUT" firstAttribute="centerY" secondItem="f9o-Mw-hRt" secondAttribute="centerY" id="Bfv-1Y-noq"/>
+                                        <constraint firstItem="f9o-Mw-hRt" firstAttribute="leading" secondItem="T1j-D0-oN6" secondAttribute="leading" id="FkF-lS-kUG"/>
                                         <constraint firstItem="Cw8-z4-eZG" firstAttribute="centerY" secondItem="T1j-D0-oN6" secondAttribute="centerY" id="HSe-gQ-HqW"/>
+                                        <constraint firstItem="6x4-5a-uUT" firstAttribute="leading" secondItem="f9o-Mw-hRt" secondAttribute="trailing" constant="8" id="LYK-q8-cdo"/>
                                         <constraint firstItem="T1j-D0-oN6" firstAttribute="centerY" secondItem="4qO-2s-Un0" secondAttribute="centerY" id="NSU-w8-ALx"/>
                                         <constraint firstItem="vDj-nd-Dxv" firstAttribute="centerX" secondItem="KJt-SR-IGb" secondAttribute="centerXWithinMargins" id="X4W-OL-s1e"/>
                                         <constraint firstItem="zbO-O5-HiP" firstAttribute="centerY" secondItem="4qO-2s-Un0" secondAttribute="centerY" id="bsr-lE-4ei"/>
                                         <constraint firstItem="Cw8-z4-eZG" firstAttribute="leading" secondItem="T1j-D0-oN6" secondAttribute="trailing" constant="8" id="cVb-Hf-Iyp"/>
                                         <constraint firstItem="4qO-2s-Un0" firstAttribute="leading" secondItem="KJt-SR-IGb" secondAttribute="leading" constant="50" id="ctT-jF-wGP"/>
                                         <constraint firstItem="4qO-2s-Un0" firstAttribute="top" secondItem="KJt-SR-IGb" secondAttribute="top" constant="5" id="jbC-K9-yWx"/>
-                                        <constraint firstItem="T1j-D0-oN6" firstAttribute="leading" secondItem="KJt-SR-IGb" secondAttribute="leading" constant="200" id="xWH-YQ-Ud3"/>
+                                        <constraint firstItem="f9o-Mw-hRt" firstAttribute="top" secondItem="T1j-D0-oN6" secondAttribute="bottom" constant="-1" id="qiO-aq-Zx2"/>
+                                        <constraint firstItem="T1j-D0-oN6" firstAttribute="leading" secondItem="KJt-SR-IGb" secondAttribute="leading" constant="180" id="xWH-YQ-Ud3"/>
                                         <constraint firstAttribute="bottom" secondItem="vDj-nd-Dxv" secondAttribute="bottom" id="xdJ-5F-BVy"/>
                                         <constraint firstItem="vDj-nd-Dxv" firstAttribute="centerX" secondItem="KJt-SR-IGb" secondAttribute="centerX" id="zHy-Jp-Hbc"/>
                                     </constraints>
@@ -313,6 +329,7 @@
                                 <connections>
                                     <outlet property="duration" destination="Cw8-z4-eZG" id="zvj-EQ-yJc"/>
                                     <outlet property="lblMessage" destination="wBa-xb-H5P" id="EY3-OO-PyK"/>
+                                    <outlet property="timeLabel" destination="6x4-5a-uUT" id="Ht9-63-NA2"/>
                                     <outlet property="type" destination="zbO-O5-HiP" id="DSx-Zf-Eai"/>
                                     <outlet property="vwAudioPlayerMain" destination="vDj-nd-Dxv" id="qrd-Gf-JUh"/>
                                     <outlet property="vwAudioProgress" destination="Sli-6F-491" id="Hiv-8a-pK1"/>
@@ -338,7 +355,7 @@
             <objects>
                 <navigationController id="fSe-Qz-1Zf" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J4F-e5-4cV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

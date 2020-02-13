@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "232B9C77-317C-43C0-AEEB-011E4355FB90"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51D4EBF8-F670-41AB-B048-3F23AA6BC0BD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioWaveForm/AudioTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "btnDownloadAudioClick(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "51D4EBF8-F670-41AB-B048-3F23AA6BC0BD - a6cfd2533277cd18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in SnoreAI.AudioTableViewCell.btnDownloadAudioClick(__C.UIButton) -&gt; ()"
+                  moduleName = "SnoreAI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ethanfan/git/Jetson-SnoreAI/ios/AudioWaveForm/AudioTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "2706">
+               </Location>
+               <Location
+                  uuid = "51D4EBF8-F670-41AB-B048-3F23AA6BC0BD - a6cfd2533277cd18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in SnoreAI.AudioTableViewCell.btnDownloadAudioClick(__C.UIButton) -&gt; ()"
+                  moduleName = "SnoreAI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ethanfan/git/Jetson-SnoreAI/ios/AudioWaveForm/AudioTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "2835">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB7C41F9-CE7D-42F6-BF5A-E925CEF01154"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioWaveForm/AudioTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "btnDownloadAudioClick(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

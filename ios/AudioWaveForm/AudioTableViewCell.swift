@@ -21,6 +21,8 @@ class AudioTableViewCell: UITableViewCell {
     @IBOutlet weak var vwBtnDownload: UIView!
     @IBOutlet weak var type: UILabel!
     @IBOutlet weak var duration: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,13 +50,13 @@ class AudioTableViewCell: UITableViewCell {
     
     
     @IBAction func btnCancelClick(_ sender: UIButton) {
-        SDDownloadManager.shared.cancelDownload(forUniqueKey: soundURL ?? "http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a")
+        SDDownloadManager.shared.cancelDownload(forUniqueKey: soundURL ?? "https://dl.espressif.com/dl/audio/ff-16b-2c-44100hz.wav")
     }
     
     @IBAction func btnDownloadAudioClick(_ sender: UIButton) {
         self.lblMessage.isHidden = true
         self.vwDownloadProgress.isHidden = false
-        let url = URL(string: soundURL ?? "http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a")
+        let url = URL(string: soundURL ?? "https://dl.espressif.com/dl/audio/ff-16b-2c-44100hz.wav")
         let request = URLRequest.init(url: url!)
         let date :NSDate = NSDate()
         let dateFormatter = DateFormatter()

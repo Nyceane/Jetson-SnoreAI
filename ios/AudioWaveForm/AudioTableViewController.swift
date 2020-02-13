@@ -39,10 +39,11 @@ class AudioTableViewController: UITableViewController {
         }
         
         let sound = sounds[indexPath.row]
-
-        cell.soundURL = sound.file
+        let soundURL = "http://192.168.3.100/" + (sound.file ?? "")
+        cell.soundURL = soundURL
         cell.type.text = sound.label
         cell.duration.text = "\(sound.duration)"
+        cell.timeLabel.text = sound.time
         
         return cell
     }
