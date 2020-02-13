@@ -10,13 +10,13 @@ import UIKit
 
 class AudioTableViewController: UITableViewController {
     
-    private var sounds = [Film]()
+    private var sounds = [Sound]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkManager().fetchFilms { (films) in
-          self.sounds = films
+        NetworkManager().fetchSound { (sounds) in
+          self.sounds = sounds
           DispatchQueue.main.async{
             self.tableView.reloadData()
           }
@@ -34,10 +34,16 @@ class AudioTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "soundIdentifier", for: indexPath)
-    
-//        cell.textLabel?.text = sounds[indexPath.row].title
-    
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "soundIdentifier", for: indexPath) as? AudioTableViewCell else{
+            return UITableViewCell()
+        }
+        
+        let sound = sounds[indexPath.row]
+
+        cell.soundURL = sound.file
+        cell.type.text = sound.label
+        cell.duration.text = "\(sound.duration)"
+        
         return cell
     }
 

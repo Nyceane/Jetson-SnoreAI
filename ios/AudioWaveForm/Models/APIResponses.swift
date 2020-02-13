@@ -32,3 +32,15 @@ struct People: Codable {
 struct Person: Codable {
   let name: String
 }
+
+struct SoundSummary: Codable {
+  let data: [Sound]?
+}
+
+
+struct Sound: Codable {
+  let duration: Float
+  let file: String?
+  let label: String?
+  let time: String?
+}

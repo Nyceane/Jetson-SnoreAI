@@ -270,7 +270,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1j-D0-oN6">
-                                            <rect key="frame" x="180" y="5" width="70" height="21"/>
+                                            <rect key="frame" x="200" y="5" width="70" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -282,7 +282,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw8-z4-eZG">
-                                            <rect key="frame" x="258" y="5" width="64" height="21"/>
+                                            <rect key="frame" x="278" y="5" width="64" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -305,7 +305,7 @@
                                         <constraint firstItem="Cw8-z4-eZG" firstAttribute="leading" secondItem="T1j-D0-oN6" secondAttribute="trailing" constant="8" id="cVb-Hf-Iyp"/>
                                         <constraint firstItem="4qO-2s-Un0" firstAttribute="leading" secondItem="KJt-SR-IGb" secondAttribute="leading" constant="50" id="ctT-jF-wGP"/>
                                         <constraint firstItem="4qO-2s-Un0" firstAttribute="top" secondItem="KJt-SR-IGb" secondAttribute="top" constant="5" id="jbC-K9-yWx"/>
-                                        <constraint firstItem="T1j-D0-oN6" firstAttribute="leading" secondItem="KJt-SR-IGb" secondAttribute="leading" constant="180" id="xWH-YQ-Ud3"/>
+                                        <constraint firstItem="T1j-D0-oN6" firstAttribute="leading" secondItem="KJt-SR-IGb" secondAttribute="leading" constant="200" id="xWH-YQ-Ud3"/>
                                         <constraint firstAttribute="bottom" secondItem="vDj-nd-Dxv" secondAttribute="bottom" id="xdJ-5F-BVy"/>
                                         <constraint firstItem="vDj-nd-Dxv" firstAttribute="centerX" secondItem="KJt-SR-IGb" secondAttribute="centerX" id="zHy-Jp-Hbc"/>
                                     </constraints>
@@ -338,7 +338,7 @@
             <objects>
                 <navigationController id="fSe-Qz-1Zf" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J4F-e5-4cV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

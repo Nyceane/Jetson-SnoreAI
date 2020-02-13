@@ -10,6 +10,8 @@ import UIKit
 
 class AudioTableViewCell: UITableViewCell {
     
+    public var soundURL : String?
+    
     @IBOutlet weak var vwAudioPlayerMain: UIView!
     @IBOutlet weak var vwDownload: UIView!
     @IBOutlet weak var vwDownloadProgress: UIView!
@@ -17,9 +19,7 @@ class AudioTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lblMessage: UILabel!
     @IBOutlet weak var vwBtnDownload: UIView!
-    
     @IBOutlet weak var type: UILabel!
-    
     @IBOutlet weak var duration: UILabel!
     
     override func awakeFromNib() {
@@ -48,13 +48,13 @@ class AudioTableViewCell: UITableViewCell {
     
     
     @IBAction func btnCancelClick(_ sender: UIButton) {
-        SDDownloadManager.shared.cancelDownload(forUniqueKey: "http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a")
+        SDDownloadManager.shared.cancelDownload(forUniqueKey: soundURL ?? "http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a")
     }
     
     @IBAction func btnDownloadAudioClick(_ sender: UIButton) {
         self.lblMessage.isHidden = true
         self.vwDownloadProgress.isHidden = false
-        let url = URL(string: "http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a")
+        let url = URL(string: soundURL ?? "http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a")
         let request = URLRequest.init(url: url!)
         let date :NSDate = NSDate()
         let dateFormatter = DateFormatter()
